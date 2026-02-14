@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BHBI Water Connection Manual for Lot Owners</title>
+<script src="[https://cdn.tailwindcss.com](https://www.google.com/search?q=https://cdn.tailwindcss.com)"></script>
+<script src="[https://cdn.jsdelivr.net/npm/chart.js](https://www.google.com/search?q=https://cdn.jsdelivr.net/npm/chart.js)"></script>
+<!--
+SPA Infographic Plan:
+1. Narrative: "From Application to Flowing Water." A guide for lot owners to join the subdivision's private water network.
+2. Section 1: Introduction - Highlighting the Deepwell & Tank system (Self-sufficiency).
+3. Section 2: Step-by-Step Procedure Flow - HTML/CSS Flexbox diagram showing the journey.
+4. Section 3: Documentary Requirements - Categorized list of forms and proofs needed.
+5. Section 4: Cost Visualization - Donut chart for Fee Allocation (Transparency).
+6. Section 5: Consumption Estimates - Bar chart for usage forecasts based on household size.
+7. Section 6: Deliverables & Responsibilities - What the owner gets vs. what they must maintain.
+
+```
+    Chosen Color Palette: "Vibrant Marine & Tech" (Inspired by water/cleanliness)
+    - Primary: #0EA5E9 (Sky 500)
+    - Secondary: #06B6D4 (Cyan 500)
+    - Accent: #F59E0B (Amber 500)
+    - Success: #10B981 (Emerald 500)
+    - Background: #F8FAFC (Slate 50)
+    - Text: #1E293B (Slate 800)
+
+    Visualization Mapping:
+    - Procedure Flow: HTML/CSS Flexbox (No SVG/Mermaid).
+    - Fee Allocation: Chart.js Donut (Canvas).
+    - Consumption Forecast: Chart.js Bar (Canvas).
+    - Checklist: Structured HTML/CSS Cards.
+
+    Confirmation: NEITHER Mermaid JS NOR SVG were used. Labels > 16 chars are wrapped. Tooltip configs applied.
+-->
+<style>
+    @import url('[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap)');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+    .chart-container { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 350px; max-height: 400px; }
+    .step-node { position: relative; flex: 1; padding: 1.5rem; background: white; border-radius: 1rem; border-top: 4px solid #0EA5E9; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+    .step-arrow { color: #0EA5E9; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; }
+    .req-card { border-left: 4px solid #06B6D4; background: #FFFFFF; transition: transform 0.2s; }
+    .req-card:hover { transform: translateX(5px); }
+</style>
+
+```
+
+</head>
+<body class="p-0 m-0">
+
+```
+<header class="bg-gradient-to-r from-sky-600 to-cyan-500 text-white py-16 px-6 text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">BHBI Water Services</h1>
+    <p class="text-xl md:text-2xl font-light opacity-90">Your Guide to Applying for a New Water Connection</p>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-12">
+    
+    <!-- Intro Section -->
+    <section class="mb-16">
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-sky-700 mb-4">A Self-Sufficient Water Network</h2>
+                <p class="text-lg leading-relaxed text-slate-600">
+                    Our subdivision is equipped with its own dedicated <strong>Deepwell System</strong> and <strong>Elevated Water Tank</strong>. This ensures a consistent, high-pressure supply independent of the municipal grid. We manage the entire lifecycle—from extraction to treatment and delivery—right to your doorstep.
+                </p>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="p-6 bg-sky-50 rounded-2xl text-center">
+                    <span class="text-3xl block mb-2">💧</span>
+                    <span class="font-bold text-sky-800">24/7 Supply</span>
+                </div>
+                <div class="p-6 bg-cyan-50 rounded-2xl text-center">
+                    <span class="text-3xl block mb-2">🛡️</span>
+                    <span class="font-bold text-cyan-800">High Pressure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedure Flow (HTML/CSS ONLY) -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-2">The Application Journey</h2>
+        <p class="text-center text-slate-500 mb-10">From initial request to the first drop of water.</p>
+        
+        <div class="flex flex-col lg:flex-row gap-4 items-stretch">
+            <!-- Step 1 -->
+            <div class="step-node text-center">
+                <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-sky-600">1</div>
+                <h3 class="font-bold text-lg mb-2">Application</h3>
+                <p class="text-sm text-slate-500">Submit Form W-01 and documents at the Admin Office.</p>
+            </div>
+            <div class="step-arrow hidden lg:flex">➔</div>
+            <div class="step-arrow lg:hidden">⬇</div>
+
+            <!-- Step 2 -->
+            <div class="step-node text-center">
+                <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-sky-600">2</div>
+                <h3 class="font-bold text-lg mb-2">Inspection</h3>
+                <p class="text-sm text-slate-500">Technical team checks tapping point & lot distance.</p>
+            </div>
+            <div class="step-arrow hidden lg:flex">➔</div>
+            <div class="step-arrow lg:hidden">⬇</div>
+
+            <!-- Step 3 -->
+            <div class="step-node text-center">
+                <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-sky-600">3</div>
+                <h3 class="font-bold text-lg mb-2">Payment</h3>
+                <p class="text-sm text-slate-500">Settle connection fees & security deposit.</p>
+            </div>
+            <div class="step-arrow hidden lg:flex">➔</div>
+            <div class="step-arrow lg:hidden">⬇</div>
+
+            <!-- Step 4 -->
+            <div class="step-node text-center">
+                <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-sky-600">4</div>
+                <h3 class="font-bold text-lg mb-2">Installation</h3>
+                <p class="text-sm text-slate-500">Tapping, meter set-up & pressure testing (3-5 days).</p>
+            </div>
+            <div class="step-arrow hidden lg:flex">➔</div>
+            <div class="step-arrow lg:hidden">⬇</div>
+
+            <!-- Step 5 -->
+            <div class="step-node text-center">
+                <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-sky-600">5</div>
+                <h3 class="font-bold text-lg mb-2">Activation</h3>
+                <p class="text-sm text-slate-500">Account setup in billing system. Water is live!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements & Forms -->
+    <section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-sm">
+            <h3 class="text-2xl font-bold mb-6 text-sky-700">Documentary Requirements</h3>
+            <div class="space-y-4">
+                <div class="req-card p-4 rounded-lg shadow-sm">
+                    <p class="font-bold">Proof of Ownership</p>
+                    <p class="text-sm text-slate-500">Deed of Absolute Sale or Transfer Certificate of Title (Photocopy).</p>
+                </div>
+                <div class="req-card p-4 rounded-lg shadow-sm">
+                    <p class="font-bold">Valid Government ID</p>
+                    <p class="text-sm text-slate-500">Owner's ID (Passport, Driver's License, or SSS).</p>
+                </div>
+                <div class="req-card p-4 rounded-lg shadow-sm">
+                    <p class="font-bold">Authorization Letter</p>
+                    <p class="text-sm text-slate-500">Required if applying on behalf of the lot owner.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm">
+            <h3 class="text-2xl font-bold mb-6 text-cyan-700">Official Forms & Deliverables</h3>
+            <ul class="space-y-4">
+                <li class="flex items-center gap-3">
+                    <span class="bg-cyan-100 text-cyan-600 px-2 py-1 rounded text-xs font-bold uppercase">Form W-01</span>
+                    <span class="text-slate-700 font-medium">New Connection Application Form</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="bg-cyan-100 text-cyan-600 px-2 py-1 rounded text-xs font-bold uppercase">Form W-03</span>
+                    <span class="text-slate-700 font-medium">Water Service Contract (Legal Agreement)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded text-xs font-bold uppercase">Deliverable</span>
+                    <span class="text-slate-700 font-medium">Sealed 1/2" Digital Water Meter</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded text-xs font-bold uppercase">Deliverable</span>
+                    <span class="text-slate-700 font-medium">Tapping Certificate & Official Receipt</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Data Visualization Charts -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <!-- Fee Breakdown -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm text-center">
+            <h3 class="text-2xl font-bold text-sky-700 mb-2">Connection Fee Allocation</h3>
+            <p class="text-slate-500 text-sm mb-6">Transparency on where your one-time connection fee is spent.</p>
+            <div class="chart-container">
+                <canvas id="feeChart"></canvas>
+            </div>
+            <div class="mt-4 p-4 bg-slate-50 rounded-xl text-xs text-left text-slate-500">
+                *Total Connection Fee varies based on lot distance from the main line. Standard fee covers up to 6 meters.
+            </div>
+        </div>
+
+        <!-- Consumption Estimates -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm text-center">
+            <h3 class="text-2xl font-bold text-cyan-700 mb-2">Estimated Monthly Usage</h3>
+            <p class="text-slate-500 text-sm mb-6">Average cubic meter (m³) consumption by household size.</p>
+            <div class="chart-container">
+                <canvas id="usageChart"></canvas>
+            </div>
+            <div class="mt-4 p-4 bg-slate-50 rounded-xl text-xs text-left text-slate-500">
+                *Estimated based on standard residential usage. 1 m³ = 1,000 Liters. Minimum monthly bill covers first 10 m³.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="bg-slate-900 text-white rounded-3xl p-10 text-center">
+        <h3 class="text-2xl font-bold mb-4">Questions about your application?</h3>
+        <p class="opacity-70 mb-8 max-w-lg mx-auto">Visit the Property Management Office (PMO) during office hours (Mon-Sat, 8AM to 5PM) or reach out via the community portal.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <div class="bg-slate-800 px-6 py-4 rounded-2xl">
+                <p class="text-xs uppercase tracking-widest opacity-50 mb-1">Email Support</p>
+                <p class="font-bold">utilities@bhbisubdivision.com</p>
+            </div>
+            <div class="bg-slate-800 px-6 py-4 rounded-2xl">
+                <p class="text-xs uppercase tracking-widest opacity-50 mb-1">Service Hotline</p>
+                <p class="font-bold">(02) 888-WATER</p>
+            </div>
+        </div>
+    </footer>
+
+</main>
+
+<script>
+    // Label Wrapping Logic (16 char)
+    function wrap(str) {
+        if (str.length <= 16) return str;
+        const words = str.split(' ');
+        const lines = [];
+        let currentLine = "";
+        words.forEach(word => {
+            if ((currentLine + word).length > 16) {
+                lines.push(currentLine.trim());
+                currentLine = word + " ";
+            } else {
+                currentLine += word + " ";
+            }
+        });
+        lines.push(currentLine.trim());
+        return lines;
+    }
+
+    // Shared Tooltip Config
+    const tooltipConfig = {
+        callbacks: {
+            title: function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            }
+        }
+    };
+
+    // 1. Fee Allocation Chart
+    const feeCtx = document.getElementById('feeChart').getContext('2d');
+    const rawFeeLabels = ['Water Meter Unit', 'Plumbing Materials and Labor', 'Security Deposit', 'Administrative and Processing Fees'];
+    new Chart(feeCtx, {
+        type: 'doughnut',
+        data: {
+            labels: rawFeeLabels.map(wrap),
+            datasets: [{
+                data: [35, 40, 15, 10],
+                backgroundColor: ['#0EA5E9', '#06B6D4', '#F59E0B', '#64748B'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { boxWidth: 12, padding: 20 } },
+                tooltip: tooltipConfig
+            }
+        }
+    });
+
+    // 2. Usage Forecast Chart
+    const usageCtx = document.getElementById('usageChart').getContext('2d');
+    const rawUsageLabels = ['Small Household (1-2 persons)', 'Medium Household (3-4 persons)', 'Large Household (5-7 persons)', 'Extended Family (8+ persons)'];
+    new Chart(usageCtx, {
+        type: 'bar',
+        data: {
+            labels: rawUsageLabels.map(wrap),
+            datasets: [{
+                label: 'Avg m³ per Month',
+                data: [12, 22, 35, 50],
+                backgroundColor: '#06B6D4',
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: { beginAtZero: true, grid: { display: false } },
+                x: { grid: { display: false } }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: tooltipConfig
+            }
+        }
+    });
+</script>
+
+```
+
+</body>
+</html>
